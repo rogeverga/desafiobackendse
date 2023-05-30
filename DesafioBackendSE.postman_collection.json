@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "bcf6f705-7197-4aed-8777-b92753723137",
+		"name": "DesafioBackendSE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pedido presencial",
+			"item": [
+				{
+					"name": "Tipo de pedido presencial, gorjeta em porcentagem e apenas uma lista e um item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"PRESENCIAL\",\r\n        \"gorjeta\": {\r\n            \"unidade\": \"REAL\",\r\n            \"valor\": 2\r\n        },\r\n        \"desconto\": {\r\n            \"valor\": 5,\r\n            \"unidade\": \"REAL\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo de pedido presencial, gorjeta em porcentagem e apenas uma lista e mais de um item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"PRESENCIAL\",\r\n        \"gorjeta\": {\r\n            \"unidade\": \"PORCENTAGEM\",\r\n            \"valor\": 10\r\n        },\r\n        \"desconto\": {\r\n            \"valor\": 5,\r\n            \"unidade\": \"REAL\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"Red Bull\",\r\n                        \"valor\": 11.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo de pedido presencial, gorjeta em porcentagem e mais de uma lista",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"PRESENCIAL\",\r\n        \"gorjeta\": {\r\n            \"unidade\": \"PORCENTAGEM\",\r\n            \"valor\": 10\r\n        },\r\n        \"desconto\": {\r\n            \"valor\": 5,\r\n            \"unidade\": \"REAL\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"Red Bull\",\r\n                        \"valor\": 11.00\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nome\": \"Aline\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Burguer\",\r\n                        \"valor\": 15.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"TNT\",\r\n                        \"valor\": 10.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo de pedido presencial, gorjeta em real e apenas uma lista e um item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"PRESENCIAL\",\r\n        \"gorjeta\": {\r\n            \"unidade\": \"REAL\",\r\n            \"valor\": 2\r\n        },\r\n        \"desconto\": {\r\n            \"valor\": 5,\r\n            \"unidade\": \"REAL\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo de pedido presencial, gorjeta em real e apenas uma lista e mais de um item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"PRESENCIAL\",\r\n        \"gorjeta\": {\r\n            \"unidade\": \"REAL\",\r\n            \"valor\": 3\r\n        },\r\n        \"desconto\": {\r\n            \"valor\": 5,\r\n            \"unidade\": \"REAL\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"Red Bull\",\r\n                        \"valor\": 11.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo de pedido presencial, gorjeta em real e mais de uma lista",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"PRESENCIAL\",\r\n        \"gorjeta\": {\r\n            \"unidade\": \"REAL\",\r\n            \"valor\": 5\r\n        },\r\n        \"desconto\": {\r\n            \"valor\": 5,\r\n            \"unidade\": \"REAL\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"Red Bull\",\r\n                        \"valor\": 11.00\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nome\": \"Aline\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Burguer\",\r\n                        \"valor\": 15.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"TNT\",\r\n                        \"valor\": 10.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido entrega",
+			"item": [
+				{
+					"name": "Tipo de pedido entrega, desconto em porcentagem e apenas uma lista e um item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"ENTREGA\",\r\n        \"valorTaxaEntrega\": 5,\r\n        \"desconto\": {\r\n            \"valor\": 10,\r\n            \"unidade\": \"PORCENTAGEM\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo de pedido entrega, desconto em porcentagem e apenas uma lista e mais de um item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"ENTREGA\",\r\n        \"valorTaxaEntrega\": 5,\r\n        \"desconto\": {\r\n            \"valor\": 10,\r\n            \"unidade\": \"PORCENTAGEM\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"Red Bull\",\r\n                        \"valor\": 11.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo de pedido entrega, desconto em porcentagem e mais de uma lista",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"ENTREGA\",\r\n        \"valorTaxaEntrega\": 5,\r\n        \"desconto\": {\r\n            \"valor\": 10,\r\n            \"unidade\": \"PORCENTAGEM\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Salada\",\r\n                        \"valor\": 17.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"Red Bull\",\r\n                        \"valor\": 11.00\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nome\": \"Aline\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"X-Burguer\",\r\n                        \"valor\": 15.00\r\n                    },\r\n                    {\r\n                        \"nome\": \"TNT\",\r\n                        \"valor\": 10.00\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Erro",
+			"item": [
+				{
+					"name": "Forçando erro de campo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido\": {\r\n        \"tipo\": \"ENTREGA\",\r\n        \"valorTaxaEntrega\": 5,\r\n        \"desconto\": {\r\n            \"valor\": 10,\r\n            \"unidade\": \"PORCENTAGEM\"\r\n        },\r\n        \"listas\": [\r\n            {\r\n                \"nome\": \"João\",\r\n                \"itens\": [\r\n                    {\r\n                        \"nome\": \"\",\r\n                        \"valor\": null\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pagamentos/link",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pagamentos",
+								"link"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

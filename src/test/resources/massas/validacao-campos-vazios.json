@@ -1,0 +1,24 @@
+{
+  "pedido": {
+    "tipo": null,
+    "gorjeta": {
+      "unidade": null,
+      "valor": null
+    },
+    "desconto": {
+      "valor": null,
+      "unidade": null
+    },
+    "listas": [
+      {
+        "nome": null,
+        "itens": [
+          {
+            "nome": null,
+            "valor": null
+          }
+        ]
+      }
+    ]
+  }
+}

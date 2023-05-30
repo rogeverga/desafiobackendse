@@ -1,0 +1,24 @@
+{
+  "pedido": {
+    "tipo": "PRESENCIAL",
+    "gorjeta": {
+      "unidade": "REAL",
+      "valor": 2
+    },
+    "desconto": {
+      "valor": 5,
+      "unidade": "REAL"
+    },
+    "listas": [
+      {
+        "nome": "João",
+        "itens": [
+          {
+            "nome": "X-Salada",
+            "valor": 17.00
+          }
+        ]
+      }
+    ]
+  }
+}
